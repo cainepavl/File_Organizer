@@ -1,4 +1,4 @@
-# File_Organizer Script
+# File_Organizer_Script
 
 A cross-platform script to automatically organize your Downloads folder into categorized folders on your Desktop.
 
