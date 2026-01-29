@@ -2,6 +2,19 @@
 
 A cross-platform script to automatically organize your Downloads folder into categorized folders on your Desktop.
 
+## Table of Contents
+
+- [Features](#features)
+- [Supported File Types](#supported-file-types)
+- [Installation & Usage](#installation-&-usage)
+- [What it Does](#what-it-does)
+- [Important Notes](#important-notes)
+- [Customization](#customization)
+- [Troubleshooting](#troubleshooting)
+- [Automation](#automation)
+- [License](#license)
+- [Support](#support)
+
 ## Features
 
 - **Automatic folder creation**: Creates Video, Audio, ISOs, Docs, and Other folders on your Desktop
