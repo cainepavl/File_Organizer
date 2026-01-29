@@ -6,12 +6,12 @@ A cross-platform script to automatically organize your Downloads folder into cat
 
 - [Features](#features)
 - [Supported File Types](#supported-file-types)
-- [Installation & Usage](#installation-&-usage)
+- [Installation & Usage](#installation--usage)
 - [What it Does](#what-it-does)
 - [Important Notes](#important-notes)
 - [Customization](#customization)
 - [Troubleshooting](#troubleshooting)
-- [Automation](#automation)
+- [Automation (Optional)](#automation-optional)
 - [License](#license)
 - [Support](#support)
 
