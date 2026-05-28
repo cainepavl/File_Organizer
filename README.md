@@ -2,6 +2,8 @@
 
 A cross-platform script to automatically organize your Downloads folder into categorized folders on your Desktop.
 
+<img width="1408" height="768" alt="work-files-hover" src="https://github.com/user-attachments/assets/b837c958-9c88-4c7d-86e1-8488ed0ba6b4" />
+
 ## Table of Contents
 
 - [Features](#features)
