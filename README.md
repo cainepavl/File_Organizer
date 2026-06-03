@@ -88,7 +88,7 @@ Any file type not listed above will be moved to the "Other" folder
 ## Important Notes
 
 - **Folders in Downloads**: The script only processes files, not folders. Any subdirectories in Downloads will remain untouched.
-- **File name conflicts**: If a file with the same name already exists in the destination folder, the script will overwrite it (use caution).
+- **File name conflicts**: If a file with the same name already exists in the destination folder, the script will skip it and report it in the summary — your existing file is never overwritten.
 - **No undo**: Once files are moved, you'll need to move them back manually if needed.
 - **Backup recommended**: Consider backing up important files before running the script for the first time.
 
@@ -135,7 +135,7 @@ Add to your crontab to run periodically:
 
 ## License
 
-Free to use and modify as needed.
+[MIT License](LICENSE) — free to use, modify, and distribute with attribution.
 
 ## Support
 

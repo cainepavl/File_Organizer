@@ -26,8 +26,9 @@ $AudioExts = @('mp3', 'wav', 'flac', 'aac', 'ogg', 'wma', 'm4a', 'opus', 'aiff',
 $ISOExts = @('iso', 'img', 'dmg', 'vhd', 'vmdk')
 $DocsExts = @('pdf', 'doc', 'docx', 'txt', 'odt', 'rtf', 'xls', 'xlsx', 'ppt', 'pptx', 'csv', 'ods', 'odp')
 
-# Counter for moved files
+# Counters for moved and skipped files
 $movedCount = 0
+$skippedCount = 0
 
 Write-Host "Organizing files from Downloads folder..." -ForegroundColor Cyan
 Write-Host "----------------------------------------" -ForegroundColor Gray
@@ -60,9 +61,17 @@ foreach ($file in $files) {
         $type = "Other"
     }
     
+    # Skip if a file with the same name already exists at the destination
+    $destPath = Join-Path $dest $file.Name
+    if (Test-Path $destPath) {
+        Write-Host "Skipped: $($file.Name) → already exists in $type" -ForegroundColor Yellow
+        $skippedCount++
+        continue
+    }
+
     # Move file
     try {
-        Move-Item -Path $file.FullName -Destination $dest -Force
+        Move-Item -Path $file.FullName -Destination $dest
         Write-Host "Moved: $($file.Name) → $type" -ForegroundColor Green
         $movedCount++
     }
@@ -73,7 +82,8 @@ foreach ($file in $files) {
 
 Write-Host "----------------------------------------" -ForegroundColor Gray
 Write-Host "Organization complete!" -ForegroundColor Green
-Write-Host "Total files moved: $movedCount" -ForegroundColor Yellow
+Write-Host "Total files moved:   $movedCount" -ForegroundColor Yellow
+Write-Host "Total files skipped: $skippedCount (already exist at destination)" -ForegroundColor Yellow
 Write-Host ""
 Write-Host "Folders created/verified on Desktop:" -ForegroundColor Cyan
 Write-Host "  - Video" -ForegroundColor White

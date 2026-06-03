@@ -50,8 +50,9 @@ contains() {
     return $in
 }
 
-# Counter for moved files
+# Counters for moved and skipped files
 moved_count=0
+skipped_count=0
 
 echo "Organizing files from Downloads folder..."
 echo "----------------------------------------"
@@ -84,6 +85,13 @@ for file in "$DOWNLOADS"/*; do
         type="Other"
     fi
     
+    # Skip if a file with the same name already exists at the destination
+    if [[ -e "$dest/$filename" ]]; then
+        echo "Skipped: $filename → already exists in $type"
+        ((skipped_count++))
+        continue
+    fi
+
     # Move file
     if mv "$file" "$dest/"; then
         echo "Moved: $filename → $type"
@@ -95,7 +103,8 @@ done
 
 echo "----------------------------------------"
 echo "Organization complete!"
-echo "Total files moved: $moved_count"
+echo "Total files moved:   $moved_count"
+echo "Total files skipped: $skipped_count (already exist at destination)"
 echo ""
 echo "Folders created/verified on Desktop:"
 echo "  - Video"
