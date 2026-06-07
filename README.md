@@ -1,5 +1,10 @@
 # File_Organizer_Script
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Shell: Bash](https://img.shields.io/badge/shell-Bash-blue.svg)]()
+[![Shell: PowerShell](https://img.shields.io/badge/shell-PowerShell-blue.svg)]()
+[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows-informational.svg)]()
+
 A cross-platform script to automatically organize your Downloads folder into categorized folders on your Desktop.
 
 <img width="1408" height="768" alt="work-files-hover" src="https://github.com/user-attachments/assets/b837c958-9c88-4c7d-86e1-8488ed0ba6b4" />
